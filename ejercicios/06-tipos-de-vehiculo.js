@@ -34,14 +34,64 @@
 
 class Vehiculo {
   // Tu código aquí
+
+  constructor(placa, pasajeros) {
+
+    this.placa = placa;
+
+    this.pasajeros = pasajeros;
+  }
+
+  tarifa() {
+
+    return 2950;
+  }
+
+  reporte() {
+
+    return `${this.placa} | ${this.pasajeros} pasajeros | Tarifa: $${this.tarifa()}`;
+  } 
 }
 
 class Alimentador {
-  // Tu código aquí
+  // Tu código aquí // repetimos codigo con diferencia de tarifa
+
+  constructor(placa, pasajeros) {
+
+    this.placa = placa;
+
+    this.pasajeros = pasajeros;
+  }
+
+  tarifa() {
+
+    return 0;
+  } 
 }
 
 class BusDual {
-  // Tu código aquí
+
+  // Tu código aquí // repetimos codigo inicial y realizamos la comparacion de tarifa con el parametro esElectrico
+
+  constructor(placa, pasajeros, esElectrico) {
+
+    this.placa = placa;
+
+    this.pasajeros = pasajeros;
+
+    this.esElectrico = esElectrico;
+  }
+
+  tarifa() {
+
+    if (this.esElectrico) {
+
+      return 2500;
+    } else {
+
+      return 3200;
+    }
+  } 
 }
 
 // No borres esta línea: es la puerta por donde el test usa tus clases
